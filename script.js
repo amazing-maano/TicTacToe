@@ -1,7 +1,7 @@
-const ticTacToeGame = new TicTacToeGame();
-ticTacToeGame.start();
+const game = new StartGame();
+game.start();
 
-function TicTacToeGame() {
+function StartGame() {
   const board = new Board();
   const humanPlayer = new HumanPlayer(board);
   const computerPlayer = new ComputerPlayer(board);
@@ -26,8 +26,6 @@ function TicTacToeGame() {
     turn++;
   }
 }
-
-
 
 function Board() {
   this.qId = Array.from(document.getElementsByClassName('q'));
